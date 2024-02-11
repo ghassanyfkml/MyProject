@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS bootstrap-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+<!-- Toast -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-
+content-center align-items-center w-100">
+    <div class="toast d-flex align-items-center text-white bg-success
+    border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            Successfully added to cart.
+        </div>
+        <button type="button" class="btn-close-white ms-auto me-
+        2" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+</div>
+<!-- Detail -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 pt-2">
+            <img src="assets/12.png" class="card-img-top" alt="...">
+        </div>
+        <div class="col-12 col-md-7 pt-3 pt-lg-2 ps-lg-5 mulish-font">
+            <br>
+            <br>
+            <br>
+            <h2>Pudding Cake</h2>
+            <p>Rp 150.000,00</p>
+            <br>
+            <p>Kue berlapis puding dengan topping buah</p>
+            <font size="1" align="center">&#11088; &#11088; &#11088; &#11088; &#11088;</font><br>
+            <br>
+            <a href="checkout.html"></a>
+            <button type="button" class="btn btn-dark btn-lg" style="background-color: #84253E;"
+            onclick="showSpinner()">
+        
+                <!-- Spinners -->
+                <span id="spin" class="spinner-border spinner-border-lg
+                    d-none" role="status" aria-hidden="true"></span>
+                <span id="text">Add to Cart</span>
+            </button>
+            </a>
+        <div>
+        <h1></h1>
+        <button title="Click to Show/Hide Content" type="button" style="height: 30px; width: 135px; background-color:black; color:white" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Description</button>
+        <div id="spoiler" style="display:none"> 
+                <br>
+                <div class="card" style="width: 440px; background-color: #EFF5F5;">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <b>Pudding Cake</b>
+                        <br>
+                        <p>Kue berlapis puding dengan topping buah</p>
+                        
+                        Harga tertera untuk 1 pudding cake
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+<script>
+// Inisialisasi Toast
+var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl)
+})
+// Spinner
+function showSpinner(){
+    var spin = document.getElementById("spin");
+    var text = document.getElementById("text");
+
+    text.style.display = "none";
+    spin.classList.remove ("d-none");
+    spin.classList.add ("d-block");
+
+    var delayInMilliseconds = 1000; //1 second
+
+    setTimeout (function() {
+        spin.classList.remove("d-block");
+        spin.classList.add("d-none");
+        text.style.display = "block";
+        toastList.forEach(toast => toast.show()); // This show them
+
+    }, delayInMilliseconds);
+}
+</script>
+
+<!-- Tooltips -->
+<h1>&ensp;</h1>
+<p><b>Categories : Desert</b></p>
+<p><b>Ordering : H-3</b> 
+    <i class="fa fa-info-circle" data-bs-
+    container="body" data-bs-toggle="tooltip" data-bs-placement="right"
+    title="Sameday delivery call customer service"></i></p>
+</body>
+</html>

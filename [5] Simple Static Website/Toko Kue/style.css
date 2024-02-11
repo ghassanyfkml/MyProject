@@ -1,0 +1,213 @@
+/* Mengganti Font*/
+@import url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quando';
+}
+
+/*Mengganti warna font Navbar*/
+.navbar-brand {
+    color : #ffffff;
+}
+
+/*Mengganti warna font Header*/
+
+
+.header {
+    padding: 10px 10px 10px 10px;
+    background-color: #84253E;
+}
+
+.header a {
+    color: #ffffff;
+    text-align: center;
+}
+
+.header a, h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.header a, h1:hover {
+    color: #ff9b9b;
+	text-decoration: none;
+}
+
+
+.header a, h6 {
+    color: #fac2c2;
+    text-align: center;
+}
+
+/*Mengganti warna font menjadi hitam*/
+.collapse ul li a{
+    color : #ffffff !important;
+}
+
+.collapse ul li a:hover{
+  color : #ff9b9b!important;
+}
+
+/*Mengganti warna background dropdown*/
+.dropdown-menu{
+    background-color: #84253E;
+}
+
+.dropdown-menu a:hover{
+    background-color: #5c071e !important;
+}
+
+/*Memberi warna pada today best deals*/
+.best-deal h1{
+    font-size: 25px;
+    color: #000000;
+}
+
+/*Style garis*/
+hr{
+    width: 10%;
+    border: 1px solid #000000;
+}
+
+/*Mengganti font*/
+.card-text{
+    color: #84253E !important;
+    font-family: Mulish;
+    font-size: 15px !important;
+}
+
+.card-text s{
+    color: #7E7F86 !important;
+    font-family: Mulish;
+    font-size: 12px !important;
+}
+
+/*Mengganti font*/
+.mulish-font {
+    font-family: Mulish;
+}
+
+.grid {
+    background: #ffb0b0;
+	margin-top: 10px;
+	padding: 10px 15px 10px 25px;
+	cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quando';
+  }
+  .content1{
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .content1 .text{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #202020;
+  }
+  .content1 .p{
+    font-size: 2.1875rem;
+    font-weight: 600;
+    color: #202020;
+  }
+  
+
+/* Checkout*/
+
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #84253E;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #700121;
+    color: #ff9797;
+  }
+
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }

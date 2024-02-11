@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+        <div class="header"><title>Sweet Cake</title>
+        </div>
+    </head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #84253E;">
+    <div class="container-fluid">
+        <!-- Brand --> 
+        <a class="navbar-brand" href="Home.html"><h1><B>Sweet </B>Cake</h1>
+            <h6>Handmade With Love</h6></a>
+        <!--Toggler button--> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent">
+            <ul class="navbar-nav quando-font">
+                <!-- Home -->
+                <li class="nav-item me-5">
+                    <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                </li>
+                <!-- Menu -->
+                <li class="nav-item me-5">
+                    <a class="nav-link" aria-current="page" href="Menu1.html">Menu</a>
+                </li>
+                <!-- Choose Your Moment -->
+                <li class="nav-item dropdown me-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" 
+                    data-bs-toggle="dropdown" aria-expanded="false">Choose Your Moment</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="Birthday.html">Birthday</a></li>
+                        <li><a class="dropdown-item" href="Wedding.html">Wedding</a></li>
+                        <li><a class="dropdown-item" href="Desert.html">Desert</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" href="Checkout.html">
+                        <i class="fa fa-shopping-bag fa-1x" aria-hidden="true"></i>
+                        <!-- Bagde -->
+                        <span class="badge rounded-pill translate-middle bg-danger">0</span>
+                    </a>
+                </li> 
+            </ul>               
+        </div>            
+    </div>
+</nav>
+<!-- Akhir Navbar -->
+
+<body>
+<!-- Toast -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-
+content-center align-items-center w-100">
+    <div class="toast d-flex align-items-center text-white bg-success
+    border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            Successfully added to cart.
+        </div>
+        <button type="button" class="btn-close-white ms-auto me-
+        2" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+</div>
+<!-- Detail -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4 pt-2">
+            <img src="assets/9.png" class="card-img-top" alt="...">
+        </div>
+        <div class="col-12 col-md-7 pt-3 pt-lg-2 ps-lg-5 mulish-font">
+            <br>
+            <br>
+            <br>
+            <h2>Red Velvet</h2>
+            <br>
+            <h2 class="card-text"><b>Rp 200.000,00</b></h2>
+            <br>
+            <p>Bolu merah dengan rasa red velvet yang manis</p>
+            <font size="1" align="center">&#11088; &#11088; &#11088; &#11088; &#11088;</font><br>
+            <br>
+            <a href="checkout.html">
+            <button type="button" class="btn btn-dark btn-lg" style="background-color: #84253E;"
+            onclick="showSpinner()">
+        
+                <!-- Spinners -->
+                <span id="spin" class="spinner-border spinner-border-lg
+                    d-none" role="status" aria-hidden="true"></span>
+                <span id="text">Add to Cart</span>
+            </button>
+            </a>
+        <div>
+        <h1></h1>
+        <button title="Click to Show/Hide Content" type="button" style="height: 30px; width: 135px; background-color:black; color:white" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Description</button>
+        <div id="spoiler" style="display:none"> 
+                <br>
+                <div class="card" style="width: 440px; background-color: #EFF5F5;">
+                    <div class="card-body">
+                        <p class="card-text">
+                        <b>Red Velvet</b>
+                        <br>
+                        <p>Bolu lapis coklat berwarna merah, cokelat kemerahan, atau kemerahan, yang dilapisi dengan keju krim putih</p>
+                        
+                        Harga tertera untuk 1 kue red velvet
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+<script>
+// Inisialisasi Toast
+var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+var toastList = toastElList.map(function (toastEl) {
+    return new bootstrap.Toast(toastEl)
+})
+// Spinner
+function showSpinner(){
+    var spin = document.getElementById("spin");
+    var text = document.getElementById("text");
+
+    text.style.display = "none";
+    spin.classList.remove ("d-none");
+    spin.classList.add ("d-block");
+
+    var delayInMilliseconds = 1000; //1 second
+
+    setTimeout (function() {
+        spin.classList.remove("d-block");
+        spin.classList.add("d-none");
+        text.style.display = "block";
+        toastList.forEach(toast => toast.show()); // This show them
+
+    }, delayInMilliseconds);
+}
+</script>
+
+<!-- Tooltips -->
+<h1>&ensp;</h1>
+<p><b>Categories : Desert</b></p>
+<p><b>Ordering : H-3</b> 
+    <i class="fa fa-info-circle" data-bs-
+    container="body" data-bs-toggle="tooltip" data-bs-placement="right"
+    title="Sameday delivery call customer service"></i></p>
+</div>
+</div>
+</div>
+
+<!-- Awal Footer -->
+<hr class="footer">
+<div class="container">
+  <div class="row footer-body">
+    <div class="col-md-6">
+    <div class="copyright">
+      <strong>Copyright</strong> <i class="far fa-copyright"></i> 2022 - Ghassany dan Naufalia</p>
+    </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-end">
+    <div class="icon-contact">
+    <label class="font-weight-bold">Follow Us </label>
+    <a href="https://web.facebook.com/?_rdc=1&_rdr"><img src="assets/icon/fb.png" class="mr-3 ml-4" data-toggle="tooltip" title="Facebook"></a>
+    <a href="https://www.instagram.com/ghassanyf.kml/?hl=en"><img src="assets/icon/ig.png" class="mr-3" data-toggle="tooltip" title="Instagram"></a>
+    <a href="https://twitter.com/cagiyaaaaaaaa_?t=DR9xgpWUOeaXpLxX9TUvLQ&s=08"><img src="assets/icon/twitter.png" class="" data-toggle="tooltip" title="Twitter"></a>
+  </div>
+    </div>
+  </div>
+</div><br>
+<!-- Akhir Footer -->
+
+<!-- JS bootstrap -->
+<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
