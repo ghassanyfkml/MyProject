@@ -2,7 +2,7 @@
 
 CREATE TABLE total_sales_permonth AS
 SELECT
-	SUM(`Jan`) AS Total_Jan,
+    SUM(`Jan`) AS Total_Jan,
     SUM(`Feb`) AS Total_Feb,
     SUM(`Mar`) AS Total_Mar,
     SUM(`Apr`) AS Total_Apr,
