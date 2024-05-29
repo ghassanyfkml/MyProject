@@ -1,0 +1,53 @@
+-- Total Sales Each Month
+
+CREATE TABLE total_sales_permonth AS
+SELECT
+	SUM(`Jan`) AS Total_Jan,
+    SUM(`Feb`) AS Total_Feb,
+    SUM(`Mar`) AS Total_Mar,
+    SUM(`Apr`) AS Total_Apr,
+    SUM(`May`) AS Total_May,
+    SUM(`Jun`) AS Total_Jun,
+    SUM(`Jul`) AS Total_Jul,
+    SUM(`Aug`) AS Total_Aug,
+    SUM(`Sep`) AS TotaL_Sep,
+    SUM(`Oct`) AS Total_Oct,
+    SUM(`Nov`) AS Total_Nov,
+    SUM(`Dec`) AS Total_Dec
+FROM wholesalesmotor2023;
+
+
+-- Brands with the highest total sales in 2023
+
+SELECT Brand, Sales FROM `wholesalesmotor2023`
+GROUP BY Brand
+ORDER BY Sales DESC
+LIMIT 1;
+
+
+-- Brands with the lowest total sales in 2023
+
+SELECT Brand, Sales FROM `wholesalesmotor2023`
+GROUP BY Brand
+ORDER BY Sales ASC
+LIMIT 1;
+
+
+-- Highest and lowest sales achievement for each brand
+
+CREATE TABLE max_min_sales AS
+SELECT
+    Brand As merek,
+    GREATEST(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, `Dec`) AS max_sales,
+    LEAST(Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, `Dec`) AS min_sales
+FROM wholesalesmotor2023;
+
+-- Average sales of each brand
+
+CREATE TABLE mean_sales AS
+SELECT
+    Brand,
+    Sales/12 AS mean_sales
+FROM wholesalesmotor2023
+GROUP BY Brand
+ORDER BY mean_sales DESC;
