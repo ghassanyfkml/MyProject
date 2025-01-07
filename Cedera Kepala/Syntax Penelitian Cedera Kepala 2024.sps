@@ -7,24 +7,6 @@
 DESCRIPTIVES VARIABLES= MAP_30 SpO2_30 Tk.Kesadaran_30
   /STATISTICS=MEAN STDDEV MIN MAX.
 
-
-*Uji Bivariat-----------------------------------------------------------------------------------------------------------.
-*MAP.
-NPAR TESTS
-  /K-W=MAP_30 BY GOS(1 5)
-  /MISSING ANALYSIS.
-
-*Tk.Kesadaran.
-NPAR TESTS
-  /K-W=Tk.Kesadaran_30 BY GOS(1 5)
-  /MISSING ANALYSIS.
-
-*Tk.Kesadaran.
-NPAR TESTS
-  /K-W=SpO2_30 BY GOS(1 5)
-  /MISSING ANALYSIS.
-
-
 *Uji Regresi Logistik Biner---------------------------------------------------------------------------------------.
 
 *Model 1 Sebelum Revisi.
