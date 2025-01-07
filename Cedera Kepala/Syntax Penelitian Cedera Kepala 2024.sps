@@ -7,7 +7,7 @@
 DESCRIPTIVES VARIABLES= MAP_30 SpO2_30 Tk.Kesadaran_30
   /STATISTICS=MEAN STDDEV MIN MAX.
 
-*Uji Regresi Logistik Biner---------------------------------------------------------------------------------------.
+*Uji Regresi Logistik Ordinal---------------------------------------------------------------------------------------.
 
 *Model 1 Sebelum Revisi.
 PLUM GOS BY Tk.Kesadaran_30 WITH SpO2_30 MAP_30
